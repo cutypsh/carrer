@@ -1,0 +1,143 @@
+/* Shorter introduction and three selected case studies. */
+.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.core-capabilities{margin-top:25px}.core-capabilities article{padding-block:20px}
+.core-capabilities h3{font-size:19px}.core-capabilities p{font-size:13px}
+.career-narrative{font-size:14px;line-height:1.95;color:#68796c;max-width:770px;margin:25px 0 18px}
+.career-thread{display:flex;flex-wrap:wrap;gap:11px;align-items:center;margin-bottom:30px;font-size:11px;color:#67805a}
+.career-thread span{border:1px solid #d8e0cf;border-radius:99px;padding:6px 12px}.career-thread i{font-style:normal;color:#95a28a}
+.judgment-list{list-style:none;counter-reset:judgment;margin-top:22px}
+.judgment-list li{position:relative;counter-increment:judgment;padding:20px 0 20px 39px;border-top:1px solid #d9e1d0}
+.judgment-list li:last-child{border-bottom:1px solid #d9e1d0}
+.judgment-list li:before{content:counter(judgment,decimal-leading-zero);position:absolute;left:0;top:23px;font-size:10px;color:#8c9c7c}
+.judgment-list h3{font-size:19px;font-weight:580;margin-bottom:10px;line-height:1.6;color:#2b4735}
+.judgment-list p{font-size:14px;line-height:1.95;color:#687a5f}
+.career-detail-link{font-size:11px;color:#557547;border-bottom:1px solid #cad7be;white-space:nowrap;margin-left:6px}
+@media(max-width:700px){.project-grid{grid-template-columns:1fr}.core-capabilities h3{font-size:18px}.core-capabilities p{font-size:12px}.career-narrative{font-size:13px;margin-block:19px 15px}.career-thread{gap:7px;font-size:9px}.career-thread span{padding:5px 8px}.judgment-list li{padding:17px 0 17px 30px}.judgment-list li:before{top:20px;font-size:9px}.judgment-list h3{font-size:17px}.judgment-list p{font-size:12px}.career-detail-link{font-size:10px}}
+@media print{.judgment-list{margin-top:12px}.judgment-list li{padding:11px 0 11px 27px;break-inside:avoid}.judgment-list li:before{top:14px;font-size:7px}.judgment-list h3{font-size:12px;margin-bottom:5px}.judgment-list p{font-size:10px;line-height:1.85}.career-narrative{font-size:10px;line-height:1.8;margin-block:15px}.career-thread{font-size:8px;margin-bottom:18px}.career-detail-link{display:none}.core-capabilities h3{font-size:13px}.core-capabilities p{font-size:10px}}
+
+/* Compare concrete responsibility scopes, never population rankings. */
+.strength-layout{grid-template-columns:1fr 1.05fr}
+.strength-profile{padding:22px 28px 20px}
+.strength-identity{margin:14px 0 16px;gap:14px}
+.strength-identity>img{width:48px;height:60px;border-radius:9px}
+.strength-identity strong{font-size:21px}.strength-identity p{display:none}
+.range-intro{border-top:1px solid #e4e9e1;padding-top:18px;margin-bottom:16px}
+.range-intro h3{font-size:15px;font-weight:580;letter-spacing:-.035em;line-height:1.6}
+.range-intro p{font-size:11px;color:#748076;margin-top:5px;line-height:1.7}
+.range-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:18px;font-size:10px;color:#64776b}
+.range-legend>span{display:flex;gap:6px;align-items:center}.range-key{width:15px;height:4px;display:inline-block;border-radius:2px}
+.range-key-basic{background:#9ba59a}.range-key-person{background:#397459}
+.range-axis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;font-size:10px;color:#7d8c80;text-align:center;padding:0 13px;margin-bottom:5px}
+.strength-map.capability-comparison{display:flex;flex-direction:column;gap:3px}
+.skill-node.range-row{min-height:0;padding:8px 13px 7px;background:transparent;border:1px solid transparent;border-radius:9px;transform:none;color:#244536}
+.range-row-title{display:flex;align-items:center;gap:10px;margin-bottom:8px;min-width:0}
+.range-row-title>strong{font-size:14px;font-weight:570;line-height:1.5;white-space:nowrap}
+.skill-node .range-row-title>small{font-size:11px;color:#728273;line-height:1.5;margin-left:auto}
+.skill-node.range-row .skill-indicator{position:static;font-size:14px;line-height:1;color:#9aa893;transform:none;flex:0 0 auto}
+.range-tracks{display:flex;flex-direction:column;gap:4px}
+.range-person,.range-basic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.range-person>span{position:relative;height:6px;border-radius:2px;background:#edf0e9}
+.range-person>.reached{background:#61806c}.range-person>.endpoint:after{content:'';position:absolute;right:0;top:50%;width:9px;height:9px;border:2px solid white;border-radius:50%;background:#397459;transform:translateY(-50%);box-sizing:content-box}
+.range-basic>span{height:3px;border-radius:2px;background:transparent}.range-basic>span:first-child{background:#aab2a6}
+.skill-node.range-row:hover{background:#f5f7f2;border-color:#d9e2d2}
+.skill-node.range-row[aria-pressed="true"]{background:#f0f5ea;border-color:#ccdbc0;color:#224431}
+.skill-node.range-row[aria-pressed="true"] .range-row-title>small{color:#557249}
+.skill-node.range-row[aria-pressed="true"] .range-person>.reached{background:#397459}
+.skill-node.range-row[aria-pressed="true"] .skill-indicator{color:#397459;transform:rotate(45deg)}
+.range-note{font-size:9px;line-height:1.7;color:#788576;border-top:1px solid #e5ebdf;margin-top:17px;padding-top:12px}
+@media(max-width:900px) and (min-width:701px){.strength-layout{grid-template-columns:1fr}.strength-profile{padding:27px 32px}.strength-details{border-left:0;border-top:1px solid #e2e8db}.strength-identity>img{width:48px;height:60px}.range-row-title>strong{font-size:14px}.skill-node .range-row-title>small{font-size:11px}.range-axis{font-size:10px}.range-intro p{font-size:12px}.range-legend{font-size:11px}.range-note{font-size:10px}.strength-panel-jump{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:12px}}
+@media(max-width:700px){.strength-layout{grid-template-columns:1fr}.strength-profile{padding:23px 20px}.range-intro h3{font-size:14px}.range-intro p{font-size:11px}.range-legend{gap:8px 12px;font-size:9px}.range-axis{font-size:9px;padding-inline:9px}.skill-node.range-row{padding:12px 9px 10px}.range-row-title{gap:6px}.range-row-title>strong{font-size:13px}.skill-node .range-row-title>small{font-size:9px}.range-row .skill-indicator{font-size:13px}.range-note{font-size:9px}.strength-identity{margin:18px 0}.strength-identity span{font-size:9px}}
+@media(max-width:359px){.strength-profile{padding:20px 14px}.range-intro h3{font-size:13px}.range-row-title>strong{font-size:12px}.skill-node .range-row-title>small{font-size:8px}.range-legend{font-size:8px;gap:8px 10px}.range-axis{font-size:8px}.range-note{font-size:8px}.strength-identity span{font-size:8px}}
+@media print{.strength-layout{grid-template-columns:1fr 1fr}.strength-profile{padding:16px 18px}.strength-identity{margin:10px 0}.strength-identity>img{width:36px;height:44px}.strength-identity strong{font-size:15px}.range-intro{padding-top:10px;margin-bottom:10px}.range-intro h3{font-size:11px}.range-intro p{font-size:8px}.range-legend{font-size:7px;margin-bottom:9px;gap:8px}.range-axis{font-size:7px}.skill-node.range-row{padding:8px 10px 7px;break-inside:avoid}.range-row-title>strong{font-size:10px}.skill-node .range-row-title>small{font-size:7px}.range-person>.reached{border-bottom:5px solid #365544}.range-person>span{height:5px}.range-basic>span:first-child{border-bottom:2px solid #999}.range-basic>span{height:2px}.range-person>.endpoint:after{width:5px;height:5px;border-color:white;border-width:1px}.range-note{font-size:7px;margin-top:10px;padding-top:8px}.strength-panel-jump{display:none}}
+
+@media print{.range-key-basic{border-bottom:3px solid #999}.range-key-person{border-bottom:3px solid #365544}}
+
+/* Select demonstrated work instead of ranking skills against an arbitrary baseline. */
+.output-row{display:block;text-align:left;width:100%;min-height:0;padding:15px 14px;border:1px solid transparent;border-radius:10px;background:transparent}
+.output-row-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.output-row-title strong{font-size:14px;font-weight:600}.output-row-title>span{color:#78917d}
+.skill-node.output-row>small{display:block;margin-top:7px;font-size:11px;line-height:1.7;color:#6b7e6d}
+.output-row:hover{background:#f5f7f2;border-color:#d9e2d2}.output-row[aria-pressed="true"]{background:#f0f5ea;border-color:#ccdbc0}
+.deliverable-list{border-top:1px solid #d9e1d0;margin-top:20px}.deliverable-list article{display:flex;gap:20px;padding:21px 0;border-bottom:1px solid #d9e1d0;break-inside:avoid}
+.deliverable-list article>span{font-size:10px;color:#78916b;padding-top:6px}.deliverable-list h3{font-size:18px;line-height:1.6;margin-bottom:7px}
+@media(max-width:700px){.output-row{padding:14px 10px}.output-row-title strong{font-size:13px}.skill-node.output-row>small{font-size:10px}.deliverable-list article{gap:14px;padding:18px 0}.deliverable-list h3{font-size:16px}}
+@media print{
+ /* Alternate numeric glyphs can lose their Unicode mapping in Chromium PDFs. */
+ *{font-variant-numeric:normal!important;font-feature-settings:"tnum" 0,"zero" 0!important}
+ [data-strength-panel][hidden],[data-plan-panel][hidden],[data-category][hidden]{display:block!important}
+ .strengths-section,.strength-layout,.strength-details,.career-section{break-inside:auto!important}
+ .strength-profile{break-inside:avoid}.strength-details{display:block}.strength-detail{break-inside:avoid;animation:none!important}
+ .skill-node.output-row{padding:8px 10px;break-inside:avoid;border:1px solid #b8c1b8!important}.output-row-title strong{font-size:10px}.skill-node.output-row>small{font-size:8px}
+ .strength-detail-label{font-size:8px}.strength-evidence th,.strength-evidence td{font-size:9px}
+ .deliverable-list{margin-top:12px}.deliverable-list article{padding:12px 0;gap:14px}.deliverable-list h3{font-size:12px}.deliverable-list article>span{font-size:8px}
+ .resume-job:before{content:counter(experience,decimal-leading-zero)}
+}
+
+@media print{.resume-job:nth-of-type(n+3){padding-top:8px;padding-bottom:8px}.resume-block:has(> #certificates-title){break-before:page}}
+
+@media print{.about-section,.career-section,.lifemix-intro{display:block}.section-label{break-after:avoid;margin-bottom:12px}.section-content{break-before:avoid}.lifemix-intro>div:first-child{break-after:avoid;margin-bottom:16px}.lifemix-letter{padding-top:0;break-before:avoid}.project-grid{display:block}.case-card+.case-card{margin-top:14px}}
+
+@media print{.lifemix-intro>div:first-child{break-inside:avoid!important}}
+
+/* Full financial history leads; strategy roles show how the expertise expanded. */
+.career-group+.career-group{margin-top:45px}.career-group-heading{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;padding-bottom:16px;border-bottom:2px solid #b6c8aa;break-after:avoid}
+.career-group-heading h3{font-size:20px;font-weight:650}.career-group-heading>span{font-size:10px;color:#74836c}
+.timeline-row h4{font-size:21px;font-weight:620;line-height:1.6}.timeline-row h4 a:hover{text-decoration:underline;text-underline-offset:4px}
+.resume-job[id]{scroll-margin-top:110px}
+@media(max-width:700px){.career-group+.career-group{margin-top:35px}.career-group-heading h3{font-size:18px}.career-group-heading>span{font-size:9px}.timeline-row h4{font-size:19px}.career-thread{gap:7px}.career-thread span{font-size:9px}}
+@media print{.career-group+.career-group{margin-top:20px}.career-group-heading{padding-bottom:9px}.career-group-heading h3{font-size:15px}.career-group-heading>span{font-size:8px}.timeline-row h4{font-size:14px}.timeline-row{break-inside:avoid}.career-group-heading+.timeline{break-before:avoid}.resume-job[id]{scroll-margin-top:0}}
+
+/* Keep selected capability text readable on the light selection background. */
+.skill-node.output-row{color:#244536;transform:none}
+.skill-node.output-row>small{color:#526653}
+.skill-node.output-row:hover{color:#244536;background:#f5f7f2;border-color:#b6c8aa;transform:none}
+.skill-node.output-row[aria-pressed="true"],.skill-node.output-row[aria-pressed="true"]:hover{color:#244536;background:#eef5e7;border-color:#66865d;box-shadow:inset 3px 0 0 #397459}
+.skill-node.output-row[aria-pressed="true"] .output-row-title strong{color:#244536}
+.skill-node.output-row[aria-pressed="true"]>small{color:#4b624b}
+.skill-node.output-row[aria-pressed="true"] .output-row-title>span{color:#365a42}
+.skill-node.output-row:focus-visible{outline:3px solid #365a42;outline-offset:3px}
+
+/* Company-specific proposals and source-backed application narrative. */
+
+
+.fit-section{margin-top:48px;padding-top:30px;border-top:1px solid #55725f}
+.fit-section>h3{font-size:24px;line-height:1.5;color:#f1f3e9}
+.fit-section>p{font-size:12px;line-height:1.8;color:#c9d5c5;margin-top:10px}
+.fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:25px}
+.fit-card{padding:23px 0;border-top:1px solid #78917b}
+.fit-card>span{font-size:10px;letter-spacing:.08em;color:#c0d7a9}
+.fit-card h4{font-size:18px;line-height:1.6;color:#f1f3e9;margin:13px 0}
+.fit-card p{font-size:13px;line-height:1.95;color:#ced8ca}
+.fit-card dl{font-size:12px;line-height:1.9;margin-top:18px;color:#ced8ca}
+.fit-card dt{font-weight:600;color:#f1f3e9;margin-top:10px}
+.fit-card dd{margin:0}
+.fit-card>a{display:inline-block;font-size:11px;margin-top:22px;color:#dcebcf;border-bottom:1px solid #78917b;padding-bottom:4px}
+.letter-section+.letter-section{margin-top:28px}
+#application,#investment-strategy{scroll-margin-top:110px}
+.letter-section h3{font-size:18px;line-height:1.65;color:#142a2e;margin-bottom:14px}
+.letter-thesis{font-size:15px;line-height:1.85;color:#244536;font-weight:600;border-left:3px solid #397459;padding-left:17px;margin-bottom:24px}
+
+
+@media(max-width:700px){.fit-section{margin-top:35px}.fit-section>h3{font-size:22px}.fit-grid{grid-template-columns:1fr;gap:8px}.fit-card{padding:22px 0}.fit-card h4{font-size:18px}.letter-thesis{font-size:14px}.letter-section h3{font-size:17px}}
+@media print{.fit-section{margin-top:20px;padding-top:16px}.fit-section>h3{font-size:17px}.fit-section>p{font-size:9px}.fit-grid{gap:16px;margin-top:15px}.fit-card{break-inside:avoid;padding:12px 0}.fit-card h4{font-size:12px;margin:8px 0}.fit-card p,.fit-card dl{font-size:9px;line-height:1.8}.fit-card dl{margin-top:10px}.fit-card>span{font-size:7px}.fit-card>a{display:none}.letter-thesis{font-size:11px;line-height:1.8;padding-left:12px;margin-bottom:16px}.letter-section{break-inside:avoid}.letter-section+.letter-section{margin-top:17px}.letter-section h3{font-size:12px;margin-bottom:9px;break-after:avoid}}
+
+@media print{.letter-body{font-size:11px;line-height:1.85}.letter-section:nth-of-type(3){break-before:page}}
+
+.insight-profile{margin-top:35px;padding-top:25px;border-top:1px solid #b6c8aa}
+.insight-profile h3{font-size:23px;line-height:1.6;color:#142a2e;margin-bottom:15px}
+.insight-profile p{font-size:14px;line-height:1.95;color:#526653}
+.insight-profile p+p{margin-top:15px}
+.insight-profile .insight-principle{border-left:3px solid #397459;padding-left:17px;margin-top:22px}
+.insight-principle strong{display:block;color:#244536;margin-bottom:7px;font-weight:650}
+#insight,#coding{scroll-margin-top:110px}
+@media(max-width:700px){.insight-profile{margin-top:27px;padding-top:22px}.insight-profile h3{font-size:20px}.insight-profile p{font-size:13px}.insight-profile .insight-principle{padding-left:13px}}
+@media print{.insight-profile{margin-top:20px;padding-top:14px}.insight-profile h3{font-size:15px;margin-bottom:10px;break-after:avoid}.insight-profile p{font-size:10px;line-height:1.85}.insight-profile p+p{margin-top:10px}.insight-profile .insight-principle{margin-top:14px;padding-left:12px;break-inside:avoid}}
+
+/* Keep the resume visible in the fixed header, including mobile. */
+.header-inner{gap:24px}.main-nav{margin-left:auto}
+.header-resume{display:inline-flex;align-items:center;justify-content:center;gap:14px;flex-shrink:0;min-height:44px;padding:10px 17px;border:1px solid #142a2e;border-radius:4px;background:#142a2e;color:#fff;font-size:13px;font-weight:600;white-space:nowrap;line-height:1.5;transition:background .18s}
+.header-resume:hover{background:#2b4744;color:#fff}
+.hero-actions{flex-wrap:wrap;gap:12px 18px}.hero-actions .button-outline{border-color:#84977e;color:#244536;background:#fff}.hero-actions .button-outline:hover{background:#f0f5ea}
+@media(max-width:700px){.header-inner,.subpage .header-inner{gap:12px}.header-resume{order:2;margin-left:auto;min-height:42px;padding:9px 12px;font-size:12px;gap:9px}.js-ready .menu-toggle{order:3;margin-left:0}.main-nav{order:4;flex-basis:100%;margin-left:0}.hero-actions{gap:12px}.hero .hero-actions .button{font-size:12px;padding:12px 16px;gap:14px;min-height:46px}.hero-actions .text-link{flex-basis:100%;padding-top:5px}}
+@media(max-width:380px){.header-inner .brand-caption{display:none}}
+@media print{.header-resume{display:none}.hero-actions{display:none}}

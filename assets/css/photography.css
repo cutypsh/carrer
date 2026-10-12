@@ -1,0 +1,17 @@
+/* Editorial photography for the selected projects. */
+.case-art.photo-art{padding:0;background:#e8ecdf;isolation:isolate}
+.photo-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.case-card:hover .photo-art>img{transform:scale(1.035)}
+.photo-art:after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,38,32,.27),transparent 36%);pointer-events:none}
+.case-art.photo-art .art-caption{position:absolute;inset:20px 23px auto;color:#fff;z-index:2;text-shadow:0 1px 8px #102a2460}
+.case-art.photo-art .art-caption>span{font-size:8px;letter-spacing:.12em}
+.case-featured .photo-art>img{object-position:49% center}
+.project-cover{margin:0 0 44px;overflow:hidden;border:1px solid #d5dbcc;border-radius:4px;background:#e8ecdf;aspect-ratio:2.45}
+.project-cover>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 53%}
+@media(max-width:700px){
+ .case-art.photo-art .art-caption{inset:18px 22px auto}
+ .project-cover{aspect-ratio:1.5;margin-bottom:30px}
+ .project-cover>img{object-position:center}
+}
+@media(prefers-reduced-motion:reduce){.photo-art>img{transition:none}.case-card:hover .photo-art>img{transform:none}}
+@media print{.project-cover{display:none}}

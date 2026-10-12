@@ -1,0 +1,55 @@
+/* Transparent canvas and ink-friendly printing across every page. */
+html,body{background:transparent}
+.site-header{background:rgba(255,255,255,.97)}
+.work-section{background:transparent}
+@media print{
+ html,body{background:transparent!important}
+ *,*::before,*::after{background:transparent!important;background-image:none!important;box-shadow:none!important;text-shadow:none!important;color:#172d27!important}
+ .hero-emphasis::after{display:none}
+ .strengths-section{break-inside:auto}
+ .strength-layout{display:block;overflow:visible;border-radius:0;border:0}
+ .strength-profile{padding:12px 0;break-inside:avoid}
+ .strength-identity{margin:12px 0}
+ .strength-map{grid-template-columns:repeat(3,1fr);gap:8px}
+ .skill-node{min-height:70px;padding:9px;border:1px solid #b8c1b8!important;border-radius:0}
+ .skill-node .skill-index{margin-bottom:5px}
+ .strength-highlights{margin-top:12px;padding-top:12px}
+ .strength-panel-jump{display:none}
+ .strength-details{border:0}
+ .strength-detail{padding:18px 0;break-inside:avoid}
+ .strength-detail h3{font-size:18px}
+ .strength-description{min-height:0;font-size:11px}
+ .strength-case-link{display:none}
+ .strength-identity>img{width:48px;height:60px}
+ .hero-profile,.resume-portrait{background:transparent!important}
+ .hero{grid-template-columns:1fr 180px;gap:24px;min-height:0;padding-block:18px 24px}
+ .hero h1{font-size:32px;line-height:1.45;margin-block:14px}
+ .hero-intro{font-size:11px;line-height:1.8}
+ .hero-profile{max-width:160px;border:0}
+ .hero-profile>img{height:190px;aspect-ratio:auto}
+ .hero-profile figcaption{padding:9px 0}
+ .hero-profile figcaption strong{font-size:14px}
+ .hero-profile figcaption small{font-size:6px;margin-left:5px}
+ .hero-profile figcaption>a,.hero-actions,.portrait-side-label{display:none}
+ .hero-keywords{font-size:9px;margin-top:12px}
+ .proof-strip{padding-block:15px;margin-bottom:10px;break-inside:avoid}
+ .proof-item strong{font-size:15px}.proof-item p{font-size:9px}
+ .section{padding-block:24px}
+ .section-heading{margin-bottom:18px}.section-heading h2,.strengths-section h2{font-size:24px}
+ .about-section{gap:24px}.about-section h2{font-size:25px}.section-lead{font-size:11px}
+ .capability-list article{padding-block:12px}.capability-list h3{font-size:13px}.capability-list p{font-size:10px}
+ .strength-layout{break-inside:avoid}
+ .case-grid{grid-template-columns:1fr 1fr;gap:14px}
+ .case-card{display:block;break-inside:avoid;border-radius:0}
+ .case-featured{grid-column:1/-1;display:block}
+ .case-art,.project-filters{display:none}
+ .case-copy{padding:18px}.case-copy h3,.case-featured .case-copy h3{font-size:20px}
+ .case-copy p{font-size:10px}.case-meta{font-size:8px}.case-link{display:none}
+ .career-section{gap:28px;break-inside:avoid}.career-section h2{font-size:25px}
+ .lifemix-intro{gap:28px}.lifemix-intro h2{font-size:27px}.lifemix-letter{padding-top:0;font-size:11px}
+ .job-match{margin-top:24px}.job-match>a{grid-template-columns:180px 1fr 16px;gap:18px;padding-block:12px}.job-match>a>span{font-size:12px}.job-match p{font-size:10px}
+ .plan-section{display:block;padding-top:24px}.plan-intro>p{max-width:none;font-size:11px}.plan-tabs{display:none}.plan-panel{margin-top:16px;break-inside:avoid}
+ .contact-section{padding-block:24px;break-inside:avoid}.contact-section h2{font-size:24px}
+}
+
+@media print{.project-block>.block-label,.project-block>h2{break-after:avoid;page-break-after:avoid}.project-block>h2+*{break-before:avoid;page-break-before:avoid}}
